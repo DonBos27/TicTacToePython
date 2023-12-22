@@ -1,5 +1,6 @@
 import tkinter
 import tkinter.messagebox
+from pathlib import Path
 
 
 def winner_of_game():
@@ -120,6 +121,10 @@ win = False
 
 # Create a window to open the game
 root = tkinter.Tk()
+
+# Add icon to the application
+icon_path = Path(r"C:\Users\Hp\PycharmProjects\TicTacToe\TicTacToe.ico")
+root.iconbitmap(default=icon_path)
 
 # personalised the window
 root.title("TicTacToe")
