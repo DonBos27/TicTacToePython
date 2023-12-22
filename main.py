@@ -73,7 +73,13 @@ def check_win(clicked_row, clicked_col):
                             current_button['text'] == 'X' or current_button['text'] == '0'):
                         count += 1
                     if count == 9:
-                        print("It's a draw you should restart")
+                        result = tkinter.messagebox.showinfo(
+                            title="Draw!",
+                            message="It's a draw !",
+                            icon=tkinter.messagebox.INFO
+                        )
+                        if result == "" or result == "ok":
+                            root.destroy()
     except tkinter.TclError as e:
         if "application has been destroyed" not in str(e):
             raise
